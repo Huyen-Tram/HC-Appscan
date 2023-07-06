@@ -105,15 +105,14 @@ class ProductDetailsPage extends StatelessWidget {
                                 "Date time scanned",
                                 product!.dateTimeScan!,
                               ),
-                              getDataWidget(
-                                widthParent,
+                              getDataWidget(widthParent,
                                 "Packing date",
-                                product!.dateOfManufacture!,
+                                product!.dateOfManufacture!
                                  //"2023-06-16T06:59:43.736Z",
                               ),
                               getDataWidget(widthParent,
                                 "Expiration date",
-                                product!.expirationDate!,
+                                product!.expirationDate!
                                 // "2023-06-16T06:59:43.736Z",
                               ),
                               getDataWidget(widthParent,

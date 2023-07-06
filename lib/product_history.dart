@@ -1,15 +1,12 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import '../models/product.dart';
 import '../product_details_page.dart';
 import '../utils/HiveUtils.dart';
 import 'network_image_bytes.dart';
 
-
 class ProductHistory extends StatelessWidget {
   final Product? product;
   final bool clickable;
-
   const ProductHistory({Key? key, this.product, this.clickable = true})
       : super(key: key);
 
@@ -37,7 +34,7 @@ class ProductHistory extends StatelessWidget {
             BoxShadow(
               offset: const Offset(0, 5),
               blurRadius: 6,
-              color: const Color(0xff000000).withOpacity(0.06),
+              color: Color.fromARGB(255, 42, 5, 249).withOpacity(0.06),
             ),
           ],
         ),

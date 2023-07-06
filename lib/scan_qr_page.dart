@@ -94,8 +94,7 @@ class _ScanScreenState extends State<ScanScreen> {
   }
 
   Future<Product?> getProductByBarCode() async {
-    print("getInfoProductByBC code 1: $qrCode");
-
+    print("getInfoProductByBC: $qrCode");
     var repo = Repository();
     var response = await repo.getInfoProductByBC(qrCode);
     if (response == null || response.data == null) return null;
@@ -103,16 +102,15 @@ class _ScanScreenState extends State<ScanScreen> {
     var idProduct = dataProduct.sId;
     var timeScan = Utils.getDateTimeHoursCurrent();
     
-
     var productMapped = Product(id: idProduct!);
     productMapped.lotCode = dataProduct.lotCode;
     productMapped.description = dataProduct.pDescription;
     productMapped.name = dataProduct.pName;
     productMapped.image = dataProduct.pAvatar;
-    productMapped.dateOfManufacture = dataProduct.pPackingDate;
-    productMapped.expirationDate = dataProduct.pExpirationDate;
+    productMapped.dateOfManufacture = dataProduct.pPackingDate ?? "null";
+    productMapped.expirationDate = dataProduct.pExpirationDate ?? "null"; 
     productMapped.dateTimeScan = timeScan;
-    print("image : https:${productMapped.image}");
+    print("image: https:${productMapped.image}");
 
 
     return productMapped;
