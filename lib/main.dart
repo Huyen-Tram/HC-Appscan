@@ -10,7 +10,6 @@ void main() async {
   await Firebase.initializeApp();
   final appDocumentDirectory = await getApplicationDocumentsDirectory();
   Hive.init(appDocumentDirectory.path);
-
   Hive.registerAdapter(ProductAdapter());
 
   await Hive.openBox<String>("group");
