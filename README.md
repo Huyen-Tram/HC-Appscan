@@ -37,7 +37,7 @@ Code). Nếu sử dụng VS Code thì cần cài đặt thêm phần mở rộng
 - Tải source về máy.
 - Mở source (Visual Studio Code, Android Studio)
 - Mở Terminal, thực hiện lệnh: flutter pub get
-- Mở file main.dart (lib/main.dart), chọn thiết bị để build source, hiện run.
+- Mở file main.dart (lib/main.dart), chọn thiết bị để build source, thực hiện run.
 Hoàn thành!
 
 ## Cài đặt trên máy vật lý:
